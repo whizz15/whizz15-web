@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jquery Product Card with Modal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-dev-width, initial-scale-1, shrink-to-fit-no">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>  
+  <style>
+    .card:hover{
+      box-shadow: 20px 20px 80px -44px #000 ;
+      transition: .5s ease-in-out;
+      cursor: pointer;
+    }
+    
+    img{
+      width: 400px;
+      height: 350px;
+      object-fit: contain; 
+    }
+   
+  </style>
+    <div class="container">
+        <h1 class="text-center font-weight-normal" style="text-align: center;"><b>Jquery Product Card With Modal</b></h1>
+
+    </div>
+<div class="container mt-4 d-flex mb-5">
+  <div class="row">  
+          <div class="col-lg-4 col-md-6 mt-5">
+              <div class="card" style="align-items: center; background-color: rgb(235, 216, 216); ">
+                  <img src="headphones.jpg" class="card-img-top w-100" style="width: 300px; height: 350px;"/>
+                  <div class="card-body" style="height: 150px;">
+                      <h2 class="card-title" style="font-size: 20px;">SONY</h2>
+                        <div class="d-flex justify-content-between">
+                          <p class="card-text">Mh-Ch2844 Wireless Noise cancelling Headphones </p>
+                          <p class="card-text mr-4 text-success " style="padding-left: 10px;"> 20K,Tshs</p>
+                          
+                          
+                        </div>
+                         <!-- <a href="#" class="card-link" data-toggle="modal" data-target="#modalid">More</a>  -->
+                  </div>
+
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="card" style="align-items: center;">
+              
+                <picture>
+                 <source 
+                  srcset="iPhone12.png"
+                  media="(min-width: 350px)">
+                 <img src="iPhone12.png" class="card-img-top w-100" style="width: 300px; height: 350px;"/>
+                </picture>
+                <div class="card-body" style="background-color: rgb(235, 216, 216);">
+                    <h2 class="card-title">iPhone12</h2>
+                      <div class="d-flex justify-content-between">
+                        <p class="card-text">I Phone 5G Speed. An Edge do Edge old Display</p>
+                        <p class="card-text mr-4 text-success ">120K,Tshs</p>
+                      </div>
+                      <!--
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#modalid">More</a>
+                      --> 
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="card" style="align-items: center;">
+              <img src="shoes.jpg" class="card-img-top w-100" style="width: 400px; height: 350px;"/>
+              <div class="card-body" style="background-color: rgb(235, 216, 216);">
+                  <h2 class="card-title">NIKE</h2>
+                    <div class="d-flex justify-content-between">
+                      <p class="card-text">Resell Brook Backs up brashness with a shoe</p>
+                      <p class="card-text mr-4 text-success ">35K,Tshs</p>
+                    </div>
+                    <!--
+                    <a href="#" class="card-link" data-toggle="modal" data-target="#modalid">More</a>
+                    -->
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-5">
+        <div class="card">
+          <!--
+          <picture>
+            <source 
+              srcset="bottle.jpg"
+              media="(min-width: 350px)">
+            <img src="bottle.jpg" class="card-img-top w-100" style="width: 400px; height: 350px;"/>
+          </picture>
+        -->
+            <img src="bottle.jpg" class="card-img-top w-100" style="width: 400px; height: 350px;"/> 
+          
+            <div class="card-body" style="background-color: rgb(235, 216, 216);">
+                <h2 class="card-title">Water Bottle</h2>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">Perfect for any athlete on the go, this training</p>
+                    <p class="card-text mr-4 text-success ">15K,Tsh</p>
+                  </div>
+                  <!--
+                  <a href="#" class="card-link" data-toggle="modal" data-target="#modalid">More</a>
+                  -->
+            </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-5">
+        <div class="card">
+         <!--
+          <picture>
+            <source 
+             srcset="watch.jpg"
+             media="(min-width: 400px)"
+            >
+            <img src="watch.jpg" class="card-img-top w-100" style="width: 400px; height: 350px;"/>
+          </picture> -->
+            <img src="watch.jpg" class="card-img-top w-100" style="width: 400px; height: 350px;"/>
+            <div class="card-body" style="background-color: rgb(235, 216, 216);">
+                <h2 class="card-title">Fossil</h2>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">Gen 5 smart watch the Carlyle HR Black Silicon</p>
+                    <p class="card-text mr-4 text-success ">40K,Tsh</p>
+                  </div>
+                  <!--
+                  <a href="#" class="card-link" data-toggle="modal" data-target="#modalid">More</a>
+                  -->
+            </div>
+        </div>
+      </div>
+       <div class="col-lg-4 col-md-6 mt-5">
+          <div class="card">
+              <img src="MacBook.jpg" class="card-img-top w-100" style="width: 400px; height: 350px;"/>
+              <div class="card-body" style="background-color: rgb(235, 216, 216);">
+                <h2 class="card-title">Laptop</h2>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text"> MacBook Great 67 Notebook All purpose</p>
+                    <p class="card-text mr-4 text-success ">800K,Tshs</p>
+                  </div>
+                   <!--
+                    <a href="#" class="card-link" data-toggle="modal" data-target="#modalid">More</a>
+                   -->
+              </div>
+          </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade" id="modalid">
+  <div class="modal-dialog bg-sucess">
+    <div class="modal content" style="transform: scaleX(1.4);">
+<div class="modal-header pb-2">
+  <h1 class="font-weight-light ml-4">Description</h1>
+   <button type="button" class="close" data-dismiss="modal" aria-label="close">
+    <span aria-hidden="true">&times;</span>
+   </button>
+
+</div>
+<div class="modal-body">
+  <div class="row mt-2 p-3">
+    <div class="col-md-6">
+      <img src="" width="100%" height="200px" class="rounded">
+    </div>
+    <div class="col-md-6">
+       <h2 class="product-name"></h2>
+       <p style="box-sizing: border-box;" class="product-desc">LOREM     JJGDUT WHATEVER... this is an important thing</p>
+       <p>Review : &nbsp;&nbsp;&nbsp;
+       <i class="fa fa-star text-warning ml-2"></i>
+       <i class="fa fa-star text-warning ml-2"></i>
+       <i class="fa fa-star text-warning ml-2"></i>
+       <i class="fa fa-star text-warning ml-2"></i>
+       <i class="fa fa-star ml-2"></i>
+      </p>
+      <h4 class="product-price"></h4>
+      <button class="btn btn-sucess mt-2" style="width: 150px;">Add to card</button>
+    </div>
+  </div>
+
+</div>
+    </div>
+
+  </div>
+
+</div>
+  </body>
+</html>
