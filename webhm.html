@@ -12,6 +12,12 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             
         }
+        p{
+            text-transform: lowercase;
+        }
+        h1{
+            text-align: center;
+        }
         ul li a::after{
             content: '';
             width: 0%;
@@ -43,6 +49,11 @@
             height: 50%;
             object-fit: cover;
         }
+        .right-column:hover{
+            box-shadow: 30px 30px 100px -44px #fff ;
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
         .search-box{
             width: 45%;
             display: flex;
@@ -52,27 +63,31 @@
             outline: greenyellow;
         }
         button{
-            color: rgb(16, 31, 44);
+            color: rgb(39, 31, 25);
             font-size: 50px;
-            background-color: #6c281c;
+            /*  background-color: #6c281c; */
             border-radius: 2rem;
         }
     </style>
-    <body style="background-color: rgb(165, 159, 155); background-image: url(sneak3.jpg); background-attachment: fixed;background-size: cover;">
-        <div class="shero">
-            <div class="navbar" style="align-items: center; height: 80px; display: flex; margin: 30px auto; background-color: aliceblue;">
-                <img src="logosn.png" style="height: 100px; width: 80px;">
-                <ul style=" list-style: none; flex: 1; text-align: right;">
-                    <li style="display: inline-block; margin: 0 25px;"><a href="#" style="color: #000; padding: 0 10px; position: relative; text-decoration: none;">Home</a></li>
-                    <li style="display: inline-block; margin: 0 25px;"><a href="#" style="color: #000; padding: 0 10px; position: relative; text-decoration: none;">About</a></li>
-                    <li style="display: inline-block; margin: 0 25px;"><a href="#" style="color: #000; padding: 0 10px; position: relative; text-decoration: none;">Contact</a></li>
-                </ul>
-                <div class="navbar-icons" style="margin-left: 40px;">
-                    <img src="bellicon.png">
-                    <img src="usericon.png">
-                    <img src="menuicon.png">
+    <body style="background-color: rgb(165, 159, 155);min-height: 100vh; background-image: url(sneak3.jpg); background-attachment: fixed;background-size: cover;">
+            <header> 
+                <div class="shero">
+                    <div class="navbar" style="align-items: center; height: 80px; display: flex; margin: 30px auto; background-color: aliceblue;">
+                        <img src="logosn.png" style="height: 100px; width: 80px;">
+                        <h1>BINO AIRJORDAN CORNER</h1>
+                            <ul style=" list-style: none; flex: 1; text-align: right;">
+                                <li style="display: inline-block; margin: 0 25px;"><a href="#" style="color: #000; padding: 0 10px; position: relative; text-decoration: none;">Home</a></li>
+                                <li style="display: inline-block; margin: 0 25px;"><a href="#" style="color: #000; padding: 0 10px; position: relative; text-decoration: none;">About</a></li>
+                                <li style="display: inline-block; margin: 0 25px;"><a href="#" style="color: #000; padding: 0 10px; position: relative; text-decoration: none;">Contact</a></li>
+                            </ul>
+                        <div class="navbar-icons" style="margin-left: 40px;">
+                            <img src="bellicon.png">
+                            <img src="usericon.png">
+                            <img src="menuicon.png">
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </header> 
             <div class="banner">
                  
                      <div class="left-column">
@@ -87,7 +102,7 @@
                             where comfort and style unite. Find your perfect pair today!"</i></p>
                      </div>
                      <div class="right-column" style="height: fit-content;">
-                        <img src="sneakers.jpg" style="height: 500px; margin-inline: auto; border-radius: 3rem 3rem 3rem;padding: 1.25rem; background-color: #6c281c;" >
+                        <img src="sneakers.jpg" style="height: 500px; margin-inline: auto; border-radius: 3rem 3rem 3rem;padding: 1.25rem; background-color: #6c281c 70%;" >
                      </div>
                 
             </div>
