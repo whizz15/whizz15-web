@@ -8,5 +8,30 @@
     <body>
         <h1>NEW WORLD OF CROCHET</h1>
         <script src="effects.js"></script>
+        <table style="border: solid;">
+          <tr>
+            <th>ITEM</th>
+            <th>PRICE</th>
+          </tr>
+          <tr>
+            <td style="border: solid;">SCARVES</td>
+            <td style="border: solid;">20,000 TZS</td>
+            <td rowspan="2" style="border: solid;">15,000 TZS</td>
+          </tr>
+          <tr>
+            <td style="border: solid;">HATS</td>
+            <td style="border: solid;">15,000 TZS</td>
+          </tr>
+          <tr>
+            <td style="border: solid; column-span: 2;"> SUM: 35,000 TZS</td>
+          </tr>
+        </table>
+        <div style="align-items: right;">
+        <img  id="babyset" src="babyset.jpg" style="height: 350px; width: 500px;" onclick="alert('Hand made by DJM CROCHET')"> 
+        <br> 
+        <button onclick="babyset.src='unisexhat.jpg'">HAT</button>
+        <button onclick="babyset.src='rednwhitescarf.jpg'">SCARF</button>
+        </div>
+        <button style="padding-left: 20px; background-color: blueviolet;" onclick="alert('SHOP NOW')">CLICK</button>
     </body>
 </html>
