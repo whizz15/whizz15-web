@@ -6,13 +6,14 @@
         <link href="nwc.css" rel="stylesheet">
     </head>
     <body>
-        <nav style="text-align: right; text-decoration: wavy; color: #7383c2; align-content: flex-end; font-size: small; overflow: hidden;">
+        <nav style="text-align: right; text-decoration: wavy; color: #7383c2; font-size: 30px; align-content: flex-end; font-size: small; overflow: hidden;">
             <a href="https:wwwww">HOME</a>| |
             <a href="https:gfjhkn">ABOUT US</a>| |
             <a href="https:hhhhhh">OUR TEAM</a>| |
             <a href="hhtp:bbbbb">CONTACT US</a>| |
         </nav>
         <h1>NEW WORLD OF CROCHET</h1>
+        <p style="font-size: 50px; text-align: center;"><b>Introducing Our</b> &nbsp; <i>Christmas Offers!!!</i></p>
         <script src="effects.js"></script>
         <table style="border: solid;">
           <tr>
@@ -32,12 +33,34 @@
             <td style="border: solid; column-span: 2;"> SUM: 35,000 TZS</td>
           </tr>
         </table>
-        <div style="align-items: right;">
+        <div style="align-items: right; flex-basis: 50%;" class="pics">
         <img  id="babyset" src="babyset.jpg" style="height: 350px; width: 500px;" onclick="alert('Hand made by DJM CROCHET')"> 
         <br> 
         <button onclick="babyset.src='unisexhat.jpg'">HAT</button>
         <button onclick="babyset.src='rednwhitescarf.jpg'">SCARF</button>
         </div>
+        <div style="align-items: right; flex-basis: 50%;" class="pics"></div>
+        <h2>Order Now!</h2>
+        <form>
+          <button>Size</button>
+          <select>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+          <button>Color</button>
+          <select>
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+          </select> <br>
+        </div>
+            <label for="n1">Name: </label>
+            <input type="textbox" id="n1" value="name"><br>
+            <label for="n1">Email: </label>
+            <input type="textbox" id="n1" value="email"><br>
+            <input type="submit">
+        </form>
         <button style="padding-left: 20px; background-color: blueviolet;" onclick="alert('SHOP NOW')">CLICK</button>
     </body>
 </html>
