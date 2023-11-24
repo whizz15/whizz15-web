@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: url(womantie.jpg) no-repeat center center;
+    width: 1500px;
+    height: 900vh;
+    background-size: contain;
+    position: relative;
+}
+.container::after{
+    content: '' ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   /* background: rgba(0,0,0.4);*/
+}
+h1{
+    position: absolute;
+    top: 50;
+    left: 50;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 50px;
+    z-index: 2;
+}
+@keyframes snowfall {
+    0%{
+        opacity: 0;
+        top:0;
+        transform: translateX(-5px);
+    }
+    10%{
+        opacity:1;
+        transform:translateX(5px);
+    }
+    20%{
+        transform: translateX(-5px);
+    }
+    30%{
+        opacity: 1;
+        transform: translateX(5px);
+    }
+    40%{
+        transform: translateX(-5px);
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 100vh;
+    }
+}
