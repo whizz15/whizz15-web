@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>INTERNET CAFE</title>
+        <meta nane="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheeet" href="wk15.css">
+           <style>
+            /*
+            div.gallery{
+                margin: 5px;
+                border: 1px solid green;
+                float: left;
+                width: 180px;
+
+            }
+            div.gallery:hover{
+                border: 2px solid rgb(115, 171, 115);
+            }
+            div.gallery img{
+                width: 100%;
+                height: auto;
+            }
+            div.desc{
+                padding: 15px;
+                text-align: center;
+            }
+            */
+            div{
+                border: 2px solid;
+                padding: 20px;
+                width: auto;
+                resize: horizontal;
+                overflow: auto;
+                text-decoration: wavy;
+            }
+            *{ box-sizing: border-box;
+                letter-spacing: 2.5px;
+                line-height: 1.8;
+                word-spacing: 12px;
+
+            }
+            p{
+                text-indent: 20px;
+            }
+            /*
+               p{s
+                   border: 5px dotted rgb(163, 182, 163); outline: #1a591a solid 25px; margin: auto; padding: 2opx; text-align: center;
+               }; */
+                      body{
+                        margin: 10px;
+                        background-color: #bccdbc;
+                        color: #134513;
+                      }
+                      * { 
+    padding: 0%; 
+    margin: 0%; 
+    box-sizing: border-box; 
+} 
+  
+body { 
+    width: 100vw; 
+    height: 100vh; 
+    overflow-x: hidden; 
+} 
+  
+/* Container Style */
+  
+.container { 
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    /* 
+    background: url( 
+'success\ quotes.jpg');  */ 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+} 
+.container::before { 
+    content: ""; 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.479); 
+} 
+  
+/* Style Text Content */
+  
+.text-content { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 90%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: rgb(255, 255, 255); 
+    text-shadow: 2px 1px 5px rgb(0, 89, 255); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    letter-spacing: 2px; 
+} 
+.text-content h1 { 
+    font-size: 4rem; 
+} 
+  
+.text-content p { 
+    font-size: 1.2rem; 
+    font-style: italic; 
+    font-weight: lighter; 
+    width: 80%; 
+} 
+  
+/* Style Snowballs and Snowflakes */
+  
+.snow-ball-container .snow-ball { 
+    position: absolute; 
+    height: 5px; 
+    width: 5px; 
+    border-radius: 50%; 
+    background: white; 
+  
+} 
+.snow-ball-container .snow-ball:nth-child(even) { 
+    position: absolute; 
+    width: 5px; 
+    height: 5px; 
+    animation: flake-motion 15s linear infinite; 
+} 
+  
+/* Position the Snowballs above the screen */
+  
+.snow-ball-container .snow-ball:nth-child(1) { 
+    top: -50%; 
+    left: 5%; 
+    width: 5px; 
+    height: 5px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(2) { 
+    top: -20%; 
+    left: 10%; 
+} 
+.snow-ball-container .snow-ball:nth-child(3) { 
+    top: -50%; 
+    left: 15%; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(4) { 
+    top: -10%; 
+    left: 20%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(5) { 
+    top: -20%; 
+    left: 25%; 
+    width: 5; 
+    height: 5px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(6) { 
+    top: -40%; 
+    left: 30%; 
+} 
+.snow-ball-container .snow-ball:nth-child(7) { 
+    top: -30%; 
+    left: 35%; 
+    width: 5px; 
+    height: 5px; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(8) { 
+    top: -20%; 
+    left: 40%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(9) { 
+    top: -50%; 
+    left: 45%; 
+    width: 5px; 
+    height: 5px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(10) { 
+    top: -5%; 
+    left: 50%; 
+} 
+.snow-ball-container .snow-ball:nth-child(11) { 
+    top: -20%; 
+    left: 60%; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(12) { 
+    top: -10%; 
+    left: 70%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(13) { 
+    top: -50%; 
+    left: 80%; 
+    width: 5px; 
+    height: 5px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(14) { 
+    top: -20%; 
+    left: 90%; 
+} 
+.snow-ball-container .snow-ball:nth-child(15) { 
+    top: -50%; 
+    left: 95%; 
+    width: 3px; 
+    height: 3px; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+/* Define animations of Snowball and Snowflakes */
+  
+@keyframes snowball-animation { 
+    0% { 
+        transform: translate(0); 
+        opacity: 1; 
+    } 
+  
+    20% { 
+        transform: translate(4px, 100px); 
+        opacity: 0.8; 
+    } 
+  
+    40% { 
+        transform: translate(-7px, 200px); 
+        opacity: 0.7; 
+    } 
+    60% { 
+        transform: translate(10px, 400px); 
+        opacity: 0.5; 
+    } 
+  
+    80% { 
+        transform: translate(-14px, 700px); 
+        opacity: 0.2; 
+    } 
+  
+    100% { 
+        transform: translate(16px, 900px); 
+        opacity: 0; 
+    } 
+} 
+@keyframes flake-motion { 
+    0% { 
+        transform: translate(-2px, 0); 
+        opacity: 1; 
+    } 
+  
+    20% { 
+        transform: translate(-9px, 200px); 
+        opacity: 0.9; 
+    } 
+  
+    40% { 
+        transform: translate(14px, 300px); 
+        opacity: 0.7; 
+    } 
+  
+    60% { 
+        transform: translate(-22px, 400px); 
+        opacity: 0.6; 
+    } 
+  
+    80% { 
+        transform: translate(30px, 600px); 
+        opacity: 0.5; 
+    } 
+    90% { 
+        transform: translate(-40px 800px); 
+        opacity: 0.3; 
+    } 
+  
+    100% { 
+        transform: translate(52px, 1000px); 
+        opacity: 0; 
+    } 
+}
+                         </style>
+                      </head>
+                    <body>
+                        <div class="container"> 
+                            <div class="text-content"> 
+                                
+                                <h4>WHIZZ-KID</h4> 
+                                <!-- 
+                                    <p> 
+                                    Welcome to GeeksforGeeks Learning! 
+                                </p> -->
+                            </div> 
+                            <div class="snow-ball-container"> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                                <div class="snow-ball"></div> 
+                           
+                         
+               <header style="text-align: center; padding: 20px;text-shadow:2px 4px greenyellow; font-family:Georgia, 'Times New Roman', Times, serif ; color: #055a05; background-color: #bccdbc;">
+           <b>WHIZZ15 NET</b>
+        </header>
+            <nav style="text-align: right; text-decoration: wavy; color: #1a591a; align-content: flex-end; font-size: small; overflow: hidden;">
+                <a href="https:wwwww">HOME</a>| |
+                <a href="https:gfjhkn">ABOUT US</a>| |
+                <a href="https:hhhhhh">OUR TEAM</a>| |
+                <a href="hhtp:bbbbb">CONTACT US</a>| |
+            </nav>
+       <h1 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif; color: #055a05; background-color: #bccdbc;text-shadow:2px 4px greenyellow;">
+    WHIZZ15 NET    
+</h1>
+    <!--
+       <div class="gallery" >
+           <a target="_blank" href="ClipDropImage1691465804669_1.png">
+              <img src="ClipDropImage1691465804669_1.png">   
+                  </a>
+                      </div>
+                          -->
+                      <div style="align-items: center;align-self: center; text-align: left; background-color: #438043;">
+                        <p>Welcome to Surf and Explore the World with unlimited Data
+                            <br>Have you been having problems of not being able to complete your tasks because of not having enough internet acess?
+                            <br><strong>WHIZZ15 NET</strong> Has the Best Solution for you 
+                            <br>Here you will Have the acess to do various benefits like:
+                            <ol>
+                                <li> Acess to unlimited internet acess at very low cost</li>  
+                                <li>Browse local and Worlwide Information</li>
+                                <li>Do Assignments and get assistance on your tasks</li>
+                                <li>Play Unlimited Games</li>
+                                <li>Work on Reliable and affordable internet</li>
+                                <li>Chat with People from Various parts of the world</li>
+                            </ol>
+                        </p>
+                    </div>
+                <p>you can register to be part of our community and explore the world by just clicking! How amazing!
+            <br> You are welcome to register
+         <a href="https:\\www.whi15net.com.tz " style="color: rgb(62, 82, 232);">here</a>
+             </p>
+                 <footer style="background-color: #acb6ac; text-align: center;">
+                    &diams;IN IT TO CHANGE THE GAME AND MAKE HISTORY
+                  <br>
+            &diams;THE COST EFFECTIVE SURFING WE ALL NEED
+        </footer> 
+    </div> 
+     </div> 
+    </body>
+</html>
