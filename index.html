@@ -1,197 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Jquery Product Card with Modal</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width-dev-width, initial-scale-1, shrink-to-fit-no">
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>IphoneLoversTZ</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-<!-- Popper JS -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  </head>  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <style>
-    .card:hover{
-      box-shadow: 20px 20px 80px -44px #000 ;
-      transition: .5s ease-in-out;
-      cursor: pointer;
+    iframe{
+      width: 100%;
+      height: 500px;
+      display: flex;
+      align-items: center;
     }
-    
-    img{
-      width: 400px;
-      height: 350px;
-      object-fit: cover; 
-    }
-   
+  
+body { 
+    width: 100vw; 
+    height: 100vh; 
+    overflow-x: hidden; 
+} 
+  
+/* Container Style */
+  
+.container { 
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    /* 
+    background: url( 
+'success\ quotes.jpg');  */ 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+} 
+.container::before { 
+    content: ""; 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    /* 
+    background: rgba(215, 201, 248, 0.479); */ 
+} 
+  
+/* Style Text Content */
+  
+.text-content { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 90%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: rgb(255, 255, 255); 
+    text-shadow: 2px 1px 5px rgb(0, 89, 255); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    letter-spacing: 2px; 
+} 
+.text-content h1 { 
+    font-size: 4rem; 
+} 
+  
+.text-content p { 
+    font-size: 1.2rem; 
+    font-style: italic; 
+    font-weight: lighter; 
+    width: 80%; 
+} 
+  
+/* Style Snowballs and Snowflakes */
+  
+.snow-ball-container .snow-ball { 
+    position: absolute; 
+    height: 15px; 
+    width: 15px; 
+    border-radius: 50%; 
+    background: white; 
+  
+} 
+.snow-ball-container .snow-ball:nth-child(even) { 
+    position: absolute; 
+    width:15px; 
+    height: 15px; 
+    animation: flake-motion 15s linear infinite; 
+} 
+  
+/* Position the Snowballs above the screen */
+  
+.snow-ball-container .snow-ball:nth-child(1) { 
+    top: -50%; 
+    left: 5%; 
+    width: 15px; 
+    height: 15px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(2) { 
+    top: -20%; 
+    left: 10%; 
+} 
+.snow-ball-container .snow-ball:nth-child(3) { 
+    top: -50%; 
+    left: 15%; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(4) { 
+    top: -10%; 
+    left: 20%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(5) { 
+    top: -20%; 
+    left: 25%; 
+    width: 5; 
+    height: 5px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(6) { 
+    top: -40%; 
+    left: 30%; 
+} 
+.snow-ball-container .snow-ball:nth-child(7) { 
+    top: -30%; 
+    left: 35%; 
+    width: 15px; 
+    height: 15px; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(8) { 
+    top: -20%; 
+    left: 40%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(9) { 
+    top: -50%; 
+    left: 45%; 
+    width: 15px; 
+    height: 15px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(10) { 
+    top: -5%; 
+    left: 50%; 
+} 
+.snow-ball-container .snow-ball:nth-child(11) { 
+    top: -20%; 
+    left: 60%; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(12) { 
+    top: -10%; 
+    left: 70%; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(13) { 
+    top: -50%; 
+    left: 80%; 
+    width: 15px; 
+    height: 15px; 
+    animation: snowball-animation 12s linear 2s infinite; 
+} 
+  
+.snow-ball-container .snow-ball:nth-child(14) { 
+    top: -20%; 
+    left: 90%; 
+} 
+.snow-ball-container .snow-ball:nth-child(15) { 
+    top: -50%; 
+    left: 95%; 
+    width: 13px; 
+    height: 13px; 
+    animation: snowball-animation 12s linear infinite; 
+} 
+  
+/* Define animations of Snowball and Snowflakes */
+  
+@keyframes snowball-animation { 
+    0% { 
+        transform: translate(0); 
+        opacity: 1; 
+    } 
+  
+    20% { 
+        transform: translate(4px, 100px); 
+        opacity: 0.8; 
+    } 
+  
+    40% { 
+        transform: translate(-7px, 200px); 
+        opacity: 0.7; 
+    } 
+    60% { 
+        transform: translate(10px, 400px); 
+        opacity: 0.5; 
+    } 
+  
+    80% { 
+        transform: translate(-14px, 700px); 
+        opacity: 0.2; 
+    } 
+  
+    100% { 
+        transform: translate(16px, 900px); 
+        opacity: 0; 
+    } 
+} 
+@keyframes flake-motion { 
+    0% { 
+        transform: translate(-2px, 0); 
+        opacity: 1; 
+    } 
+  
+    20% { 
+        transform: translate(-9px, 200px); 
+        opacity: 0.9; 
+    } 
+  
+    40% { 
+        transform: translate(14px, 300px); 
+        opacity: 0.7; 
+    } 
+  
+    60% { 
+        transform: translate(-22px, 400px); 
+        opacity: 0.6; 
+    } 
+  
+    80% { 
+        transform: translate(30px, 600px); 
+        opacity: 0.5; 
+    } 
+    90% { 
+        transform: translate(-40px 800px); 
+        opacity: 0.3; 
+    } 
+  
+    100% { 
+        transform: translate(52px, 1000px); 
+        opacity: 0.1;  
+    } 
+}  
   </style>
-    <div class="container">
-        <h1 class="text-center font-weight-normal" style="text-align: center;"><b>Jquery Product Card With Modal</b></h1>
-    </div>
-<div class="container mt-4 d-flex mb-5">
-  <div class="row">  
-          <div class="col-lg-3 col-md-6 mt-5">
-              <div class="card" style="background-color: rgb(235, 216, 216); align-items: center;">
-                
-                  <img src="headphones.jpg" class="card-img-top w-100" style="width: 300px; height: 250px;"/>
-                 
-                  <div class="card-body" style="height: 150px;">
-                    <div class="d-flex justify-content-between">
-                      <h2 class="card-title" style="font-size: 20px;">SONY</h2>
-                      <b><p class="card-text mr-4 text-success " style="padding-left: 10px;"> 50,000 Tshs</p> </b> 
-                    </div>
-                        <div class="d-flex justify-content-between">
-                          <p class="card-text">Mh-Ch2844 Wireless Noise cancelling Headphones </p>
-                        </div>    
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mt-5">
-            <div class="card" style="background-color: rgb(235, 216, 216); align-items: center;">
-              
-                <img src="iPhone12.png" class="card-img-top w-100" style="width: 300px; height: 250px;"/>
-              
-                <div class="card-body" style="height: 150px;">
-                  <div class="d-flex justify-content-between">
-                    <h2 class="card-title" style="font-size: 20px;">iPhone12</h2>
-                    <b><p class="card-text mr-4 text-success " style="padding-left: 10px;"> 2,000,000 Tshs</p> </b> 
-                  </div>
-                      <div class="d-flex justify-content-between">
-                        <p class="card-text">5G Internet speed Old Edge Display </p>
-                      </div>    
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mt-5">
-          <div class="card" style="background-color: rgb(235, 216, 216); align-items: center;">
-            
-              <img src="shoes.jpg" class="card-img-top w-100" style="width: 300px; height: 250px;"/>
-            
-              <div class="card-body" style="height: 150px;">
-                <div class="d-flex justify-content-between">
-                  <h2 class="card-title" style="font-size: 20px;">NIKE</h2>
-                  <b><p class="card-text mr-4 text-success " style="padding-left: 10px;"> 500,000 Tshs</p> </b> 
-                </div>
-                    <div class="d-flex justify-content-between">
-                      <p class="card-text">All purpose shoes</p>
-                    </div>    
-              </div>
-          </div>
+</head>
+<body>
+
+  <div class="container"> 
+    <div class="snow-ball-container"> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">email here</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>0754 381 017</span></i>
       </div>
-      <div class="col-lg-3 col-md-6 mt-5">
-        <div class="card" style="background-color: rgb(235, 216, 216); align-items: center;">
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+      <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+          <h1 class="logo"><a href="index.html">IphoneLoversTZ<span>.</span></a></h1>
           
-            <img src="bottle.jpg" class="card-img-top w-100" style="width: 300px; height: 250px;"/>
-           
-            <div class="card-body" style="height: 150px;">
-              <div class="d-flex justify-content-between">
-                <h2 class="card-title" style="font-size: 20px;">Water Bottle</h2>
-                <b><p class="card-text mr-4 text-success " style="padding-left: 10px;"> 10,000 Tshs</p> </b> 
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="#about">About</a></li>
+              <li><a class="nav-link scrollto" href="#services">Services</a></li>
+              <li><a class="nav-link scrollto " href="iphone.html">Iphone</a></li>
+              <li><a class="nav-link scrollto" href="#team">covers</a></li>
+              <li><a class="nav-link scrollto" href="#team">Macbook</a></li>
+              <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="#">Drop Down 1</a></li>
+                  <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Deep Drop Down 1</a></li>
+                      <li><a href="#">Deep Drop Down 2</a></li>
+                      <li><a href="#">Deep Drop Down 3</a></li>
+                      <li><a href="#">Deep Drop Down 4</a></li>
+                      <li><a href="#">Deep Drop Down 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Drop Down 2</a></li>
+                  <li><a href="#">Drop Down 3</a></li>
+                  <li><a href="#">Drop Down 4</a></li>
+                </ul>
+              </li>
+              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav>
+        </div>
+      </header>
+             <section id="hero" class="d-flex align-items-center">
+                    <div class="container" data-aos="zoom-out" data-aos-delay="100" >
+                            <h1>Welcome to <span>IphoneLoversTZ</span></h1>
+                            <h2> Elevate Your Life with Our Premium iPhones Today!</h2>
+                                <div class="d-flex">
+                                  <a href="iphone.html" class="btn-get-started scrollto">Get Started</a>
+                                </div>
+                                <div class="col-lg-8" style="height: 500px; width:100%; flex-basis: 100%; margin: 0; padding: 0; background: url(assets/img/new-smartphone-balancing-with-wavy-item.jpg); background-size: 100% auto; background-position: center; background-repeat: no-repeat; align-items: center;justify-items:center;justify-content: center; object-fit: contain;">
+                                  <div class="portfolio-details-slider swiper" style="display: flex; justify-content: center; align-items: center; left:25%; ">
+                                        <div class="swiper-wrapper align-items-center">
+                                            <div class="swiper-slide">
+                                              <img src="assets/img/new-smartphone-balancing-with-wavy-item.jpg" style="object-fit: contain; height: 500px;" alt="iphone" >
+                                            <div style="background-color: rgb(43, 43, 83); color: aliceblue; text-align: center; height: 100px;" ><p>first phone</p></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                              <img src="assets/img/new-smartphone-balancing-with-leaves.jpg" style="object-fit: contain; height: 500px; " alt="iphone">
+                                              <div style="background-color: rgb(43, 43, 83); color: aliceblue; text-align: center; height: 100px;" ><p>first phone</p></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                              <img src="assets/img/new-smartphone-balancing-with-cloth.jpg" style="object-fit: contain; height: 500px;  " alt="iphone">
+                                              <div style="background-color: rgb(43, 43, 83); color: aliceblue; text-align: center; height: 100px;" ><p>first phone</p></div>
+                                            </div>
+                                        </div>
+                                  </div> 
+                        <div>
+                     </div>
+            </section>
+  <main id="main">
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon">
+                <center> <i class="fa fa-gears" style="font-size:50px;"></i></center>
               </div>
-                  <div class="d-flex justify-content-between">
-                    <p class="card-text">All purpose Bottle</p>
-                  </div>    
+              <center> <h4 class="title"><a href="">Repair</a></h4></center>
+              <p class="description">Meet expert electronics to give you the best out of your phone</p>
             </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 mt-5">
-      <div class="card" style="background-color: rgb(235, 216, 216); align-items: center;">
-        
-          <img src="watch.jpg" class="card-img-top w-100" style="width: 300px; height: 250px;"/>
-        
-          <div class="card-body" style="height: 150px;">
-            <div class="d-flex justify-content-between">
-              <h2 class="card-title" style="font-size: 20px;">Fossil</h2>
-              <b><p class="card-text mr-4 text-success " style="padding-left: 10px;"> 35,000 Tshs</p> </b> 
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon">
+                <center>  <i class="fas fa-shipping-fast"  ></i>
+                </center>
+               </div>
+               <center><h4 class="title"><a href="">Delivery</a></h4></center>
+              <p class="description">We bring your good items closest to you by our trusted transport partners</p>
             </div>
-                <div class="d-flex justify-content-between">
-                  <p class="card-text">Unisex Wrist watch</p>
-                </div>    
           </div>
-      </div>
-  </div>
-  <div class="col-lg-3 col-md-6 mt-5">
-    <div class="card" style="background-color: rgb(235, 216, 216); align-items: center;">
-      
-        <img src="MacBook.jpg" class="card-img-top w-100" style="width: 300px; height: 250px;"/>
-      
-        <div class="card-body" style="height: 150px;">
-          <div class="d-flex justify-content-between">
-            <h2 class="card-title" style="font-size: 20px;">Laptop</h2>
-            <b><p class="card-text mr-4 text-success " style="padding-left: 10px;"> 1,500,000 Tshs</p> </b> 
-          </div>
-              <div class="d-flex justify-content-between">
-                <p class="card-text">MacBook Great 67 Notebook All purpose</p>
-              </div>    
-        </div>
-    </div>
-</div>  
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="modalid">
-  <div class="modal-dialog bg-sucess">
-    <div class="modal content" style="transform: scaleX(1.4);">
-        <div class="modal-header pb-2">
-          <h1 class="font-weight-light ml-4">Description</h1>
-              <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                 <span aria-hidden="true">&times;</span>
-              </button>
-        </div>
-        <div class="modal-body">
-          <div class="row mt-2 p-3">
-             <div class="col-md-6">
-                 <img src="" width="100%" height="200px" class="rounded">
-             </div>
-             <div class="col-md-6">
-                  <h2 class="product-name"></h2>
-                  <p style="box-sizing: border-box;" class="product-desc">LOREM     JJGDUT WHATEVER... this is an important thing</p>
-                  <p>Review : &nbsp;&nbsp;&nbsp;
-                      <i class="fa fa-star text-warning ml-2"></i>
-                      <i class="fa fa-star text-warning ml-2"></i>
-                      <i class="fa fa-star text-warning ml-2"></i>
-                      <i class="fa fa-star text-warning ml-2"></i>
-                      <i class="fa fa-star ml-2"></i>
-                  </p>
-                  <h4 class="product-price"></h4>
-               <button class="btn btn-sucess mt-2" style="width: 150px;">
-                   Add to card
-               </button>
-          </div>
-       </div>
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon">
+                  <center><i class="fa fa-line-chart"></i></center>
+                  </div>
+                  <center><h4 class="title"><a href="">Top up</a></h4></center>
+                <p class="description"> You can exchange your old version to get a brand new iPhone from our shop</p>
+              </div>
+            </div>
       </div>
     </div>
-  </div>
-</div>
-<script defer async>
-  document.addEventListener('DOMContentLoaded', function() {
-    // setting global variables
-    window.botId = 2080
+    </section>
+    <section id="about" class="about section-bg">
+       <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>About</h2>
+              <h3>Find Out More <span>About Us</span></h3>
+            </div>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/shop.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>IphoneLoversTZ,Your Connection to Cutting-Edge Mobile Tech</h3>
+            <p class="fst-italic">
+              Your Trusted Source for Premium Apple Products: Where Quality Meets a Warm Welcome.Elevate Your Apple Experience: Discover Quality, Unmatched
+            </p>
+            <ul>
+              <li>
+                <i class="bx bx-store-alt"></i>
+                <div>
+                  <h5>Why IphoneLoversTZ is your best choice</h5>
+                  <p> IphoneLoversTZ Phone Shop is a phone shop that deals with sell of all varieties of Apple Products. Our intention is to provide quality and classic Apple products to you as well as offering other services and products in addition to our core service</p>
+                </div>
+              </li>
+              <li>
+                <i class="bx bx-images"></i>
+                <div>
+                  <h5>Get Served by our Visionary and Disciplined Team:Guiding Success with Expertise Leading the Way to Success"</h5>
+                  <p> Welcome to our shop, where good customer service isn't just a promise; it's our passion. Our dedicated team is here to make your shopping experience a delight.With expert assistance and personalized recommendations, we promise you new level of service excellence with IphoneLoversTZ.</p>
+                </div>
+              </li>
+            </ul>
+            <p>Welcome to IphoneLoversTZ, your convenient local phone shop with the latest mobile technology right to your doorstep!. Whether you're looking for the latest Iphones, accessories, or need expert repairs,
+               our team is here to assist you. With our reliable delivery service, you can now enjoy the convenience of shopping for all your mobile needs from any place.
+                <b><i>Experience the best in local service, delivered to your door, exclusively at IphoneLoversTZ!</i></b>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
     
-    // create div with id = sarufi-chatbox
-    const div = document.createElement("div")
-    div.id = "sarufi-chatbox"
-    document.body.appendChild(div)
+              </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
 
-    // create and attach script tag
-    const script = document.createElement("script")
-    script.crossOrigin = true
-    script.type = "module"
-    script.src = "https://cdn.jsdelivr.net/gh/flexcodelabs/sarufi-chatbox/example/vanilla-js/script.js"
-    document.head.appendChild(script)
+        <div class="section-title">
+          <h2>Contact</h2>
+          <h3><span>Contact Us</span></h3>
+          <p>Feel free to reach us anytime of the week, during work hours</p>
+        </div>
 
-    // create and attach css
-    const style = document.createElement("link")
-    style.crossOrigin = true
-    style.rel = "stylesheet"
-    style.href = "https://cdn.jsdelivr.net/gh/flexcodelabs/sarufi-chatbox/example/vanilla-js/style.css"
-    document.head.appendChild(style)
-  });
-</script>
-  </body>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Mwenge ITV, Dar es salaam</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>email</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>0754 381 017</p>
+            </div>
+          </div>
+        </div>
+
+             <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="map" style="display: flex; width: 100%; flex-direction: column; height: 100vh; justify-items: center;justify-content: center;">
+                  <h1 style="margin-bottom: 20px; text-align: center;color: rgb(7, 129, 223);font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><b>LOCATE US</b></h1>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15848.097111886687!2d39.2328674!3d-6.7668939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4f46d50e2571%3A0x2dad38fa6f1e0401!2sIPHONE%20LOVERSTZ!5e0!3m2!1sen!2stz!4v1693936315744!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+                </div>
+             </div>
+      </div>
+    </section><!-- End Contact Section -->
+  </main>
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h3>IphoneLoversTZ<span>.</span></h3>
+                <p>
+                  Mwenge ITV<br>
+                  Dar es salaam<br><br>
+                  <strong>Phone:</strong> 0754 381 017 <br>
+                  <strong>Email:</strong> email<br>
+                </p>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Social Networks</h4>
+                <p>Reach us through social media links below</p>
+                <div class="social-links mt-3">
+                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                  <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="container py-4">
+          <div class="copyright">
+            &copy; Copyright <strong><span>IphoneLoversTZ</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+          </div>
+        </div>
+      </footer><!-- End Footer -->
+      <div id="preloader"></div>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+
+      <!-- Template Main JS File -->
+      <script src="assets/js/main.js"></script>
+      <div class="snow-ball-container"> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+        <div class="snow-ball"></div> 
+    </div>
+  </div>
+</body>
 </html>
